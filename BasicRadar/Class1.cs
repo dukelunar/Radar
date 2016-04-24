@@ -13,7 +13,7 @@ namespace DefaultNameSpace
     {
         public static string GetPluginAuthor()
         {
-            return "Liyalai";
+            return "Veviya";
         }
 
         public static string GetPluginVersion()

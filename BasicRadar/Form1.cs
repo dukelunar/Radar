@@ -244,7 +244,11 @@ namespace BasicRadar
                                 drawPoint(halfX + vectorRotate.Item1, halfY + vectorRotate.Item2, Color.Pink);
                                 drawString(pName + " " + pDist + "m", (halfX + (int)(vectorRotate.Item1 - (8 * (pName.Count() / 2)))), (halfY + (vectorRotate.Item2 + 15)), Brushes.DeepPink);
                             }
-
+                            if (pName == "Thunderstruck Tree")
+                            {
+                                drawPoint(halfX + vectorRotate.Item1, halfY + vectorRotate.Item2, Color.Pink);
+                                drawString(pName + " " + pDist + "m", (halfX + (int)(vectorRotate.Item1 - (8 * (pName.Count() / 2)))), (halfY + (vectorRotate.Item2 + 15)), Brushes.DeepPink);
+                            }
 
 
                         }

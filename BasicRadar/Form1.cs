@@ -239,12 +239,12 @@ namespace BasicRadar
                             Tuple<int, int> vector = relativeVector(aX, aY, bX, bY);
                             Tuple<int, int> vectorRotate = rotate_point(vector.Item1, vector.Item2, 0, 0, angle);
 
-                            if (pName == "Wild Ginseng")
+                            if (pName == "Wild Ginseng" && checkBox4.Checked)
                             {
                                 drawPoint(halfX + vectorRotate.Item1, halfY + vectorRotate.Item2, Color.Pink);
                                 drawString(pName + " " + pDist + "m", (halfX + (int)(vectorRotate.Item1 - (8 * (pName.Count() / 2)))), (halfY + (vectorRotate.Item2 + 15)), Brushes.DeepPink);
                             }
-                            if (pName == "Thunderstruck Tree")
+                            if (pName == "Thunderstruck Tree" && checkBox6.Checked)
                             {
                                 drawPoint(halfX + vectorRotate.Item1, halfY + vectorRotate.Item2, Color.Pink);
                                 drawString(pName + " " + pDist + "m", (halfX + (int)(vectorRotate.Item1 - (8 * (pName.Count() / 2)))), (halfY + (vectorRotate.Item2 + 15)), Brushes.DeepPink);
@@ -384,9 +384,13 @@ namespace BasicRadar
             {
                 getPlants();
             }
-            if (checkBox4.Checked)
+            if (checkBox5.Checked)
             {
                 getBosses();
+            }
+            if (checkBox6.Checked)
+            {
+                getPlants();
             }
 
 
